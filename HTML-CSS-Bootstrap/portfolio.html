@@ -6,76 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Doe</title>
     <link rel="icon" href="./faviconPortfolio.png">
+    <link rel="stylesheet" href="./portfolio.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
-        div{
-            width:48%;
-            float: left;
-        }
-        p{
-            font-size: x-large;
-            padding: 25px;
-        }
-        button{
-            font-size: large;
-            background-color: black;
-            color: white;
-            padding: 10px 20px;
-            border: 3px solid white;
-            border-radius: 25px;
-        }
-        button:hover{
-            background-color: white;
-            color: black;
-            border-color: black;
-            cursor: pointer;
-        }
-        img{
-            display: block;
-            width: 60%;
-            margin:10px auto;
-            border-radius: 50%;
-        }
+        
     </style>
 </head>
 
 <body style="background-color: gray;">
     <header>
-        <h1 style="color:red; text-align: center;">JOHN DOE</h1>
+        <div class="topNav">
+        <div class="contactIcon">
+            <i class="fa-solid fa-square-envelope"></i><i>john@gmail.com</i> 
+            <i class="fa-solid fa-phone-volume"></i><i>12312345</i>
+        </div>
+        <div class="socialIcon">
+            <a href="#" class="LickICon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="LickICon"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="LickICon"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+        </div>
     </header>
-    <nav></nav>
+    <nav>
+        <div class="mainNavbar">
+            <ul class="navList">
+                <li class="listItem"><a href="#IAmAtTop" class="navItem">Home</a></li>
+                <li class="listItem"><a href="#edu" class="navItem">Education</a></li>
+                <li class="listItem"><a href="#perInfo" class="navItem">Personal Info</a></li>
+                <li class="listItem"><a href="#techPro" class="navItem">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="IAmAtTop"></div>
     <main>
-<section>
-<div style="padding: 10px;">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum at labore repellendus consequuntur. Sequi, eum?</p>
-    <div style="padding-left: 20%">
-        <button >Click me for more information</button>
-    </div >
-</div>
-<div>
-    <img src="./johnDoe.jpg" alt="user image" />
-</div>
-</section>
+        <section class="summary">
+            <div style="padding: 10px;">
+        <h1 style="color:red; text-align: center; font-size: xx-large;">JOHN DOE</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum at labore repellendus
+                    consequuntur. Sequi, eum?</p>
+                <div style="padding-left: 20%">
+                    <button>Click me for more information</button>
+                </div>
+            </div>
+            <div>
+                <img src="./johnDoe.jpg" alt="user image" />
+            </div>
+        </section>
 
 
-        <section style="clear: left;">
-    Image
-    </section>
-    <section>
-    personal Information
-    </section>
-    <section>
-    Education
-    </section>
-    <section>
-            technical projects
-</section>
+        <div style="clear: left;">
+            
+        </div>
+        <section id="perInfo">
+            <h1 class="headingH1"> Personal Information</h1>
+            <pre>
+        Name: John Doe,<br>
+        Address: <Address>
+            Sadashiv Peth,<br>
+            Pune<br>
+            Pincode :411211<br>
+        </Address>
 
-        </main>
-<footer>
-    &copy; john doe
-</footer>
+        Email: john@gmail.com<br>
+        Contact Number : 12341234
+    </pre>
+        </section>
+        <section id="edu">
+            <h1 class="headingH1"> Education</h1>
+            <div style="height: 300px;">add table for Education</div>
+        </section>
+        <section id="techPro">
+            <h1 class="headingH1"> Technical projects</h1>
+            <div style="height: 300px; background-color: gray;"></div>
+        </section>
 
+    </main>
 
+    <footer>
+        &copy; john doe
+    </footer>
+
+<div style="background-color: red; width: 200px; padding: 10px;"><a href="#IAmAtTop">Go To Top</a></div>
 </body>
 
 </html>

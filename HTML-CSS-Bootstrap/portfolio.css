@@ -1,0 +1,95 @@
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .summary div {
+            width: 48%;
+            float: left;
+        }
+
+        p {
+            font-size: x-large;
+            padding: 25px;
+        }
+
+        button {
+            font-size: large;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: 3px solid white;
+            border-radius: 25px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            border-color: black;
+            cursor: pointer;
+        }
+
+        img {
+            display: block;
+            width: 60%;
+            margin: 10px auto;
+            border-radius: 50%;
+        }
+        .headingH1{
+            background-color: black;
+            color: white;
+            font-size: x-large;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        nav{
+            background-color: rgb(230, 230, 230);
+            height: 90px;
+        }
+        .navList{
+            list-style-type: none;
+            padding-top: 30px;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .listItem{
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .navItem:link{
+            font-size: x-large;
+            text-decoration: none;
+            color: black;
+        }
+        .navItem:hover{
+            text-decoration: underline;
+        }
+        .navItem:active{}
+        .navItem:visited{
+            color: black;
+
+        }
+        .topNav{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 5px;
+        }
+        .contactIcon{}
+        .socialIcon{}
+        i{
+            font-size: x-large;
+            padding-left: 10px;
+        }
+        .LickICon:link{
+            color: black;
+        }
+        .LickICon:hover{
+            color: red;
+        }
+        .LickICon:active{}
+        .LickICon:visited{
+            color: black;
+
+        }
