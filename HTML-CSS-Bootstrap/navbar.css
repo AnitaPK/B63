@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav.LinkdIN{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(239, 239, 239);
+}
+.logo{
+    width: 30px;
+    height: 30px;
+}
+.userNAv{
+    width: 30px;
+    height: 30px;
+}
+.leftNav{
+    padding-left: 7px;
+}
+.middleNav{}
+.listNav{
+    list-style-type: none;
+    display: inline-block;
+}
+.listItem{
+    display: inline-block;
+    padding-right: 15px;
+    margin-right:10px;
+}
+.listLink:link{
+    font-size: x-large;
+    color: gray;
+}
+.listLink:hover{
+    color: black;
+    border-bottom: 4px solid black;
+}
+.listLink:active{}
+.listLink:visited{
+    color: gray;
+}
+.active{
+    color: black !important;
+}
+.notiFy{
+    background-color: red;
+    color: black;
+    border-radius: 50%;
+    padding: 2px 4px;
+    font-size: 15px;
+}
+.rightNav{
+    border-left: 1px solid black;
+    padding-left: 7px;
+}
+/* .verLine{
+    display: inline-block;
+    width: 1px;
+    height: 70px;
+    background-color: black;
+} */
+.rightUL{
+    /* margin-bottom: 25px; */
+}
