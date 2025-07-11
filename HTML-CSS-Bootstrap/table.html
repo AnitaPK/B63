@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table{
+            /* border:1px solid black; */
+        }
+        table, th, td{
+            border:1px solid black;
+            border-collapse: collapse;
+            /* border-spacing: 10px; */
+        }
+        .restorent th{
+            /* border:1px solid black; */
+            padding: 5px;
+            background-color: aquamarine;
+        }
+        .restorent td{
+            /* border:1px solid black; */
+            padding: 7px;
+        }
+        .restorent tr{
+            background-color: bisque;
+        }
+        .restorent tr:nth-child(even){
+            background-color: blue;
+        }
+        .redColor{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <table style="width:60%" class="restorent">
+        <thead>
+            <tr>
+            <th class="redColor">Sr No</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="redColor">001</td>
+                <td>Tea</td>
+                <td>Tea+Ginger+Sugar+Milk</td>
+                <td>₹ 20</td>
+                <td><button>Order</button></td>
+            </tr>
+            <tr>
+                <td class="redColor">002</td>
+                <td>Burger</td>
+                <td>Bread+Pattie+Vegetables</td>
+                <td>₹ 50</td>
+                <td><button>Order</button></td>
+            </tr>
+
+            <tr>
+                <td class="redColor">003</td>
+                <td>Sandwich</td>
+                <td>bread+ vegetables+sauce</td>
+                <td>&#8377; 100</td>
+                <td><button>Order</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">00</th>
+                <th colspan="2">Average</th>
+                <th rowspan="2">Red Eyes</th>
+            </tr>
+            <tr>
+                <th>Height</th>
+                <th>Weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Males</td>
+                <td>1.9</td>
+                <td>0.003</td>
+                <td>40%</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -39,7 +39,9 @@ nav.LinkdIN{
     color: black;
     border-bottom: 4px solid black;
 }
-.listLink:active{}
+.listLink:active{
+    color: black;
+}
 .listLink:visited{
     color: gray;
 }
