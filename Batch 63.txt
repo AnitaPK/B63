@@ -1,0 +1,74 @@
+Batch 63
+
+6month   JFP
+
+MERN        JavaFullStack       pythonFullstack
+
+webApplication  websites
+
+
+static website   newswebsite, blogwebsite, wisdomsprouts
+Dynamic website  banking website, social media 
+
+
+
+Frontend                        backend                    Database
+
+HTML, CSS, javascript         nodeJS   Java    python     MySQL, mongoDB
+bootstap
+reactJS  api 
+
+
+fullstack project withMysql  with mongoDB
+
+VS code 
+GitHub  (account)
+ git  
+
+NodeJs
+
+java, python , MySQL servercommunity, mongoDB compass 
+
+
+PEP
+
+
+Introduction
+Name, graduation, city,  short Term goal
+
+
+explain IP address 
+what is  port number
+what is server
+what is client
+explain www in web development
+what is url
+diff between static and dynamic website
+
+
+HTML skeleton
+
+layoutElements
+inline element block elemnent
+symantic and non symantic
+anchor tag 
+img 
+left right align 
+
+class =>single - multiple elements + single element -multiple class
+id => unique 
+
+class, list, display, id
+navbar,
+icons 
+
+
+
+
+
+
+
+
+
+
+
