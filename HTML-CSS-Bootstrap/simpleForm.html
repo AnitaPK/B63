@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .registerForm{
+            width: 50%;
+            background-color: burlywood;
+            margin: 30px auto;
+            padding: 10px;
+            border-radius: 7px;
+        }
+        .registerForm:hover{
+            box-shadow: 2px 2px 3px 3px rgb(254, 143, 69),4px 4px 5px 5px red;
+        }
+        .inputBlock input{
+            padding: 9px;
+            border-radius: 10px;
+            background-color: rgb(206, 206, 206);
+            font-size: larger;
+        }
+        input:focus {
+            background-color: aliceblue;
+        }
+
+        label {
+            font-size: larger;
+        }
+        .inputBlock{
+            display: flex;
+            flex-direction: column;
+        }
+        .inputBlock label, .inputBlock input{
+            display: inline-block;
+        }
+        h1{
+            text-align: center;
+            text-shadow: 3px 3px 2px rgb(252, 3, 3), 1px 1px 2px blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="registerForm">
+        <h1 >Register</h1>
+    <form class="">
+        <div class="inputBlock">
+            <label>Name : </label>
+            <input type="text" placeholder="add your name..." required value="John Doe" name="username" /> <br>
+        </div>
+        <div class="inputBlock">
+
+            <label>Select Gender :</label>
+            <div>
+            <input type="radio" name="gender" value="female" /><label>Female</label>
+            <input type="radio" name="gender" value="male" /><label>Male</label>
+            </div>
+        </div>
+        <div class="inputBlock">
+
+            <label for="userName">Email :</label>
+            <div>
+            <input type="email" placeholder="username@gmail.com" id="userName" size="30" />
+            </div>
+        </div>
+        <div class="inputBlock">
+
+            <label>Password :</label>
+            <div>
+            <input type="password" size="10" /></div>
+        </div>
+            <div class="inputBlock">
+
+                <label>Reapeate Password :</label>
+                <div>
+                <input type="password" /></div>
+            </div>
+            <div class="inputBlock">
+                <idv>
+                <input type="checkbox" /> Agree Terms and Conditions
+                </idv>
+            </div>
+            <div class="inputBlock">
+
+                <input type="submit" value="Login" />
+            </div>
+    </form>
+    </div>
+    <hr>
+    <input type="reset" /><br>
+    <label>Joining Date</label>
+    <input type="date" />
+    <input type="datetime-local" />
+    number :<input type="number" />
+    <input type="color" value="#0000FF" />
+    <input type="hidden" />
+    <input type="file" />
+    <input type="month" />
+    <input type="range" min="50" max="200" value="170" />
+    <input type="search" />
+    <input type="time" />
+    <input type="week" />
+    <select name="subjects" id="">
+        <option name="sub1" value="html">HTML</option>
+        <option name="sub2" value="css">CSS</option>
+        <option name="sub3" value="javascript">Javascript</option>
+    </select>
+    <br>
+    <hr>
+    <button onclick="console.log('Form submited')">Submint By Button</button>
+</body>
+
+</html>

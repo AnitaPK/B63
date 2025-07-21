@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sizeDiv{
+            width: 200px;
+            height: 200px;
+            /* background-color: aquamarine; */
+        }
+        .lGrad{
+            background-image: linear-gradient(to bottom right, red,blue, green);
+
+        }
+        .rGrad{
+            background-image: radial-gradient(farthest-side, red 90%,white, black);
+        }
+        .cGrad{
+            background-image: conic-gradient(from  90deg, red,yellow, purple);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sizeDiv lGrad"></div>
+    <div class="sizeDiv rGrad"></div>
+    <div class="sizeDiv cGrad"></div>
+
+</body>
+</html>
