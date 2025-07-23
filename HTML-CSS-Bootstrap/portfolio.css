@@ -44,6 +44,10 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
+        .Navbar{
+            position: sticky;
+            top:0;
+        }
         nav{
             background-color: rgb(230, 230, 230);
             height: 90px;

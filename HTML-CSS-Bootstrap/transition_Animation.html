@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .sizeDiv{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 70px;
+            padding: 20px;
+            /* transform: translate(300px,300px); */
+            /* transform: rotate(180deg); */
+            /* transform: skew(40deg); */
+            /* transform: scale(2,2); */
+            /* overflow: hidden; */
+        }
+        .sizeDiv:hover{
+            transform: scale(1.2,1.2);
+            overflow: hidden;
+        }
+        .content{
+            background-color: burlywood;
+            width: 400px;
+            height: 400px;
+            overflow: auto;
+        }
+        /* .content:hover{
+            overflow: visible;
+        } */
+         .imageContainer{
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+         }
+         .imageContainer img{
+            width: 100%;
+            height: 100%;
+         }
+         .imageContainer img:hover{
+            transform: scale(1.2,1.1);
+         }
+         .transitionONE{
+            border: 3px ridge yellow;
+            width: 100px;
+            height: 70px;
+            padding-top: 20px;
+            background-color: orange;
+            padding-left: 10px;
+            transition: background-color 3s 2s, font-size 5s, border-radius 3s;
+         }
+         .transitionONE:hover{
+            background-color: green;
+            font-size: large;
+            border-radius: 50%;
+         }
+         .AJAY{
+            border: 3px ridge green;
+            width: 100px;
+            height: 70px;
+            padding-top: 20px;
+            background-color: orange;
+            padding-left: 10px;
+            text-shadow: 2px 2px 3px green;
+            /* animation: animationONE 9s; */
+            animation: animationTWO 4s infinite 2s;
+         }
+         @keyframes animationONE{
+            from{color:black}
+            to{color: white;}
+         }
+         .imageRotate{
+            width: 100px;
+            height: 100px;
+            animation: rotate360 3s 3;
+         }
+         .imageRotate img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+         }
+         @keyframes rotate360{
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+         }
+
+         @keyframes animationTWO{
+            0%{transform: rotate(30deg);}
+            25%{transform: translateX(400px);border-radius:20%}
+            40%{ transform: rotate(-60deg);background-color: pink;border-radius:30%}
+            50%{transform: rotate(-40deg);font-size: x-large;border-radius:40%}
+            73%{transform: rotate(180deg); border-radius: 50%;}
+            100%{}
+         }
+
+    </style>
+</head>
+<body>
+    <div class="imageRotate">
+        <img src="./johnDoe.jpg" />
+    </div>
+    <div class="AJAY">AJAY</div>
+    <div class="transitionONE">ROHAN</div>
+    <div class="sizeDiv">HARSH</div>
+    <div class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam ducimus tempora perferendis eveniet velit vitae molestias culpa maxime. Eum ad dolores odit aperiam totam asperiores, eaque ducimus consequatur atque, delectus sed eveniet corporis iste omnis sequi deserunt aliquid quibusdam voluptatem, quasi nostrum? Error dignissimos nostrum ipsum vitae dicta, rem non magnam quae nihil amet itaque quos fugiat ipsa. Saepe, ipsum porro. Et, cupiditate obcaecati! Fugiat libero voluptates odit incidunt culpa. Quisquam perferendis ullam harum quibusdam exercitationem dolorum omnis esse assumenda dicta quae officiis fugit voluptatibus veritatis, magni accusantium minus iusto aspernatur aut ducimus qui optio vitae? Officia nemo facere libero aperiam doloremque molestias in temporibus, voluptas hic voluptatum fuga repellat! At, quas nam! Ullam exercitationem suscipit minima perspiciatis ad debitis quae dignissimos vel sapiente eum porro eaque iusto nihil temporibus quos eius tempore, ut adipisci veritatis quam. Accusamus necessitatibus laudantium, esse voluptatum accusantium consequatur officiis eligendi obcaecati animi, voluptate magnam itaque blanditiis odio quibusdam corrupti! Error dolorem corporis voluptatum vero nisi ullam ut officia fugit quo, illum quam blanditiis quisquam minima eum. Excepturi ratione nesciunt fugit sed saepe illum eum consectetur! Quis sapiente doloribus exercitationem libero perferendis placeat ullam accusantium eum repellendus omnis accusamus aut veniam nulla vero tenetur animi, saepe delectus quod expedita, velit, impedit eos iste voluptatem. Ipsa et reiciendis doloremque sapiente explicabo nam sint est. Suscipit earum ea quidem in quisquam labore? Unde, voluptatum magni. Mollitia quaerat, excepturi ratione delectus accusamus quidem veritatis, eum sit tempora officiis nisi quasi beatae aut assumenda. Ad laudantium a atque recusandae, natus debitis necessitatibus nulla ut quibusdam velit quam iure, illum vel quos officiis, laborum perferendis. Nulla, quae minima voluptatum esse aspernatur, soluta tempora velit animi molestiae sapiente rem, repellendus molestias quo voluptate illo? Rerum inventore reprehenderit, quaerat, quisquam quae animi repellat consequatur hic dolorum deleniti quia quibusdam iste consectetur?</div>
+
+    <div class="imageContainer">
+        <img src="./johnDoe.jpg" alt="" />
+    </div>
+</body>
+</html>

@@ -49,7 +49,7 @@
     <form class="">
         <div class="inputBlock">
             <label>Name : </label>
-            <input type="text" placeholder="add your name..." required value="John Doe" name="username" /> <br>
+            <input type="text" placeholder="add your name..."  required value="John Doe" name="username" /> <br>
         </div>
         <div class="inputBlock">
 
@@ -76,17 +76,20 @@
 
                 <label>Reapeate Password :</label>
                 <div>
-                <input type="password" /></div>
+                <input type="password" autofocus /></div>
             </div>
             <div class="inputBlock">
                 <idv>
                 <input type="checkbox" /> Agree Terms and Conditions
                 </idv>
             </div>
+    <input type="text" pattern="[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}"/>
+
             <div class="inputBlock">
 
                 <input type="submit" value="Login" />
             </div>
+
     </form>
     </div>
     <hr>
@@ -111,6 +114,12 @@
     <br>
     <hr>
     <button onclick="console.log('Form submited')">Submint By Button</button>
+
+
+    [0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}
+
+    [0-9A-F]
+
 </body>
 
 </html>

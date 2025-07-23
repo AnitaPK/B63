@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divSize {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            /* top:; */
+            /* left:; */
+            right: 70px;
+            bottom: 50px;
+            /* z-index:; */
+        }
+
+        .container {
+            border: 2px solid black;
+            width: 600px;
+            height: 600px;
+            position: relative;
+        }
+
+        .redBox {
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            left: 100px;
+            top: 200px;
+
+        }
+
+        .blackBox {
+            width: 100px;
+            height: 200px;
+            background-color: black;
+            position: absolute;
+            left:200px;
+            top: 200px;
+            /* z-index: 2; */
+        }
+
+        .pinkBox {
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+            left: 300px;
+            top:200px
+        }
+        .sectionOne{
+            width: 80%;
+            height: 200px;
+            border: 5px double blue;
+            position: absolute;
+            /* top:50%; */
+            bottom: 40%;
+            left:10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divSize"></div>
+    <div class="container">
+        <div class="redBox"></div>
+        <div class="blackBox"></div>
+        <div class="pinkBox"></div>
+    </div>
+<div class="sectionOne"></div>
+</body>
+
+</html>

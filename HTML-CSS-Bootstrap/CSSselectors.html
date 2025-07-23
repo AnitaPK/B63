@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:first-child{
+            color: red;
+        }
+        q:lang(no) {
+            quotes: "+" "~";
+        }
+        img{
+            border: 2px solid red;
+        }
+        img[alt]{
+            border: 2px solid blue;
+        }
+        img[alt^='star']{
+            border: 2px solid yellow;
+        }
+
+        img[alt$='star']{
+            border: 2px solid maroon;
+        }
+
+        img[alt|='star']{
+            border: 2px solid black;
+        }
+        img[alt~='star']{
+            border: 2px solid orange
+        }
+                img[alt='star']{
+            border: 2px solid green;
+        }
+        div p{
+            background-color: pink;
+        }
+        div > p{
+            background-color: yellow;
+        }
+        div ~ p{
+            background-color: gray;
+        }
+        div + p{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Selectors</h1>
+    <pre>
+        element selector
+        class selector 
+        ID selector 
+        universal selector 
+    </pre>
+    <h1>Pseudo-class selectors</h1>
+    <pre>
+        :hover    :link    :active    
+        :visited   :focus   :nth-chlid()
+        :first-child
+    </pre>
+<h1>Pseudo-elements selectors</h1>
+<pre>
+    ::first-line   ::first-letter   ::selection
+    ::after         ::before        ::marker
+</pre>
+    
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi?</div>
+    <p>Lorem ipsum dolor sit, amet <i>consectetur </i>adipisicing elit. Enim, aspernatur!</p>
+    <div>
+        <p>Lorem ipsum dolor sit, amet <i>consectetur </i>adipisicing elit. Enim, aspernatur!</p>
+        <p>Lorem, ipsum dolor sit amet <i>consectetur </i>adipisicing elit. Possimus vel aspernatur quam facere quaerat corporis!</p>
+        <p>Lorem ipsum dolor sit, amet <i>consectetur </i>adipisicing elit. Enim, aspernatur!</p>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quibusdam.</p>
+        </div>
+        <p>Lorem ipsum dolor sit, amet <i>consectetur </i>adipisicing elit. Enim, aspernatur!</p>
+
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </section>
+    </div>
+        <p>Lorem ipsum dolor sit, amet <i>consectetur </i>adipisicing elit. Enim, aspernatur!</p>
+        <p>Lorem ipsum dolor sit, amet <i>consectetur </i>adipisicing elit. Enim, aspernatur!</p>
+        <p>Lorem ipsum dolor sit, amet <i>consectetur </i>adipisicing elit. Enim, aspernatur!</p>
+        <p>Lorem ipsum dolor sit, amet <i>consectetur </i>adipisicing elit. Enim, aspernatur!</p>
+
+<q lang="no">Lorem ipsum dolor sit amet consectetur adipisicing.</q>
+<br>
+<img src="./bgImage.jpg" />
+<img src="./bgImage.jpg" alt=""/>
+<img src="./bgImage.jpg" alt="star"/>
+<img src="./bgImage.jpg" alt="starGold"/>
+<img src="./bgImage.jpg" alt="gold star gold"/>
+<img src="./bgImage.jpg" alt="star-Gold"/>
+<img src="./bgImage.jpg" alt="Gold-star"/>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
