@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.headerClass {
+    background-color: blue;
+    color: white;
+    font-size: xx-large;
+}
+
+.BGGradient {
+    background-image: linear-gradient(to right, Red, rgb(255, 212, 133), red);
+}
+
+.musivBar {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    margin-bottom: 10px;
+}
+
+.BAR {
+    width: 7px;
+    height: 60px;
+    background-color: rgb(7, 148, 0);
+    margin-right: 3px;
+    margin-bottom: 25px;
+}
+
+.B1 {
+    animation: barMoving 1s infinite;
+}
+
+.B2 {
+    animation: barMoving 1s 0.2s infinite;
+}
+
+.B3 {
+    animation: barMoving 1s 0.5s infinite;
+}
+
+.B4 {
+    animation: barMoving 1s 0.7s infinite;
+}
+
+.B5 {
+    animation: barMoving 1s 0.9s infinite;
+}
+
+@keyframes barMoving {
+    0% {
+        height: 60px;
+    }
+
+    50% {
+        height: 30px;
+    }
+
+    100% {
+        height: 60px;
+    }
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.customBTN {
+    background-color: transparent;
+    /* color: white; */
+    border: 2px solid rgb(8, 5, 61);
+    font-size: medium;
+    padding: 7px 16px;
+    margin-bottom: 10px;
+}
+
+.customBTN:hover {
+    box-shadow: 2px 2px 4px 2px rgb(8, 5, 61);
+    padding: 10px 25px;
+}
+
+.SeatCard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.card {
+    width: 12rem;
+    background-color: rgb(8, 5, 61);
+    color: white;
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 10px;
+    text-align: center;
+}
+
+.heading {
+    margin-bottom: 7px;
+}
+
+.price {
+    margin-bottom: 7px;
+}
+
+.BuyNow {
+    text-align: center;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 9px;
+    box-shadow: 1px 1px 2px 3px orange;
+    margin: 7px auto;
+}
+
+.InfoContent {
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+}
+
+details {
+    background: #191933;
+    color: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    font-size: large;
+}
+footer h3{
+    margin-bottom: 1.5rem;
+}
+.iconGroup i{
+    color: orange;
+    font-size: x-large;
+    /* transition: font-size 0.3s; */
+}
+.iconGroup i:hover{
+    transform: translateY(-6);
+    font-size: xx-large;
+
+}
+
+@media screen and (max-width: 450px){
+    .BGGradient{
+    /* background-color: green; */
+    background-image: linear-gradient(to right,pink, red);
+
+    }
+    .buttonGroup{
+        flex-wrap: wrap;
+    }
+    .SeatCard{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        margin-bottom: 10px;
+
+    }
+}
