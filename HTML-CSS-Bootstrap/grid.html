@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .containerGrid{
+            /* width: 600px; */
+            height: 600px;
+            background-color: rgb(254, 228, 233);
+            display: grid;
+            /* grid-template-columns: 200px 200px 200px; */
+            /* grid-template-rows: 300px 300px; */
+            /* grid-template-columns: repeat(3,1fr);  1fr 1fr 1fr; */
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+        .Item{
+            background-color: red;
+            width: 80px;
+            height: 80px;
+        }
+        .layoutContainer{
+            display: grid;
+            grid-template-areas: 'nav    nav   nav   nav'
+                       'LAside mainC  mainC  RAside'
+                       'LAside foo foo foo';
+        }
+        .Navbar{
+            height: 90px;
+            background-color: pink;
+            width:100%;
+            grid-area: nav;
+        }
+        .leftNav{
+            /* height: 700px; */
+            background-color: gray;
+            /* width: 20%; */
+            grid-area: LAside;
+        }
+        .mainContent{
+            /* height: 500px; */
+            background-image: linear-gradient(to right, yellow, pink) ;
+            /* width: 60%; */
+            grid-area: mainC;
+        }
+        .rightNav{
+            height: 800px;
+            background-color: cadetblue;
+            /* width: 20%; */
+            grid-area: RAside;
+        }
+        .Footer{
+            height: 300px;
+            background-color: black;
+            width: 100%;
+            grid-area: foo;
+        }
+        .fruitContainer{
+            /* width: 700px; */
+            height: 700px;
+            display: grid;
+            gap:10px;
+        }
+        .grapes{
+            background-color: rgb(36, 1, 53);
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        .strawberry{
+            background-color: rgb(193, 9, 86);
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        .watermelon{
+            background-color: rgb(255, 16, 16);
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 3;
+            grid-column-end: 5;
+
+        }
+        .Orange{
+            background-color: rgb(255, 80, 16);
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .papaya{
+            background-color: rgb(242, 255, 0);
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .pineapple{
+            background-color: rgb(90, 61, 3);
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="containerGrid">
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+    </div> -->
+
+    <!-- <div class="layoutContainer">
+        <div class="Navbar"></div>
+        <div class="leftNav"></div>
+        <div class="mainContent"></div>
+        <div class="rightNav"></div>
+        <div class="Footer"></div>
+    </div> -->
+
+    <div class="fruitContainer">
+        <div class="grapes"></div>
+        <div class="strawberry"></div>
+        <div class="watermelon"></div>
+        <div class="Orange"></div>
+        <div class="papaya"></div>
+        <div class="pineapple"></div>
+    </div>
+</body>
+</html>
