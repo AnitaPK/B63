@@ -1,0 +1,36 @@
+.custom_corousel_img{
+    width: 100% !important;
+    height: 550px !important;
+}
+.custom_caption{
+    background-color: orange;
+    padding: 30px;
+    opacity: 0.7;
+}
+.custom_caption h2{
+  color: black;
+}
+.customCard{
+  position: relative;
+}
+.customBTNOnCard{
+  display: none;
+}
+
+.EYEicon{
+  display: none;
+  position: absolute;
+  right: 30px;
+  top:20px;
+  z-index: 2000;
+  padding: 3px;
+  border-radius: 3px;
+  background-color: white;
+  color: black;
+}
+.customCard:hover .customBTNOnCard {
+  display: block;
+}
+.customCard:hover .EYEicon{
+  display: block;
+}
