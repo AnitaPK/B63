@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1 id="demoOne"></h1>
+<h2></h2>
+<h1></h1>
+<h1 id="name1"></h1>
+<h1 class="DemoClass"></h1>
+
+
+
+
+
+<button onclick="clickButton()">Click me</button>
+
+<hr><hr>
+
+<!-- <form> -->
+<input type="text" id="name2" />
+<input type="text" id="schoolName"/>
+<!-- </form> -->
+
+<button onclick="getInfo()">Get Info</button>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>School name</th>
+    </tr>
+    <tr>
+        <td id="nameTable"></td>
+        <td id="schoolNameTable"></td>
+    </tr>
+</table>
+
+
+    <script>
+        console.log("Hello world from script tag")
+        alert("Hello from alert")
+        document.querySelector('#demoOne').textContent = 'This is heading'
+        document.querySelector('h2').innerHTML = 'Hello'
+        document.querySelector('.DemoClass').innerHTML = '<i>This is heading</i>'
+        document.write("Hello from document write")
+
+        function clickButton(){
+        document.write("Hello from document write on click")
+        }
+clickButton()
+
+    name = prompt("Enter name")
+    document.querySelector('#name1').textContent = name
+
+function getInfo(){
+    nameValue = document.querySelector('#name2').value
+    schoolNameValue = document.querySelector('#schoolName').value
+    console.log(nameValue, schoolNameValue)
+    document.querySelector("#nameTable").innerHTML = nameValue
+    document.querySelector("#schoolNameTable").innerHTML = schoolNameValue
+}
+
+
+    </script>
+</body>
+</html>
