@@ -62,6 +62,29 @@ class, list, display, id
 navbar,
 icons 
 
+Bootstrap 
+
+css margin padding flex grid alignment responsive 
+
+bootstrap 3     
+bootstrap 4
+bootstrap 5.2
+
+
+Clone of pune bakers
+
+
+step 1 create repository clone_pune_bakers
+step 2 create folder on clone_pune_bakers local machine
+step 3 git add commit push README.md
+step 4 create index.html, styles.css
+
+
+complete portfolio
+bootstrap table
+install nodejs
+
+
 
 
 

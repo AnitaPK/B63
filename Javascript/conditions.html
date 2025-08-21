@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // num1 = prompt("Enter Number to check ")
+
+        if(num1 > 0){
+            console.log("Positive")
+        }else if(num1 < 0){
+            console.log('Negetive')
+        }else{
+            console.log('Entered number is zero')
+        }
+
+    </script>
+<script>
+    // n1 = prompt("Enter number to find fibonnacci up to ...")
+    // n1 = 34
+    a = 0
+    b = 1
+
+    console.log(a)
+    // console.log(b)
+
+    while(b<=n1){
+        console.log(b)
+        temp = a
+        a = b   
+        b = temp+b
+    }
+
+
+</script>
+
+
+<script>
+    computerWalaNumber = Math.floor(Math.random() * 10 +1)
+    // console.log(computerWalaNumber)  // 0   -   1
+
+    // 1-10
+
+    // console.log(computerWalaNumber)
+
+    userWalaNumber = prompt("Enter number")
+
+    if(computerWalaNumber > userWalaNumber){
+        console.log("Lower")
+    }else if(computerWalaNumber < userWalaNumber){
+        console.log("Higher")
+    }else{
+        console.log('you guess correct')
+
+    }
+</script>
+
+</body>
+</html>
