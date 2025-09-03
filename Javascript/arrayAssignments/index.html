@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Array</title>
+  </head>
+  <body>
+
+<div class="container">
+    <h1>TO DO List</h1>
+    <input type="text" id="todo" />
+    <button class="btn btn-primary" onclick="submitToDO()" >Add To Do </button>
+    <button class="btn btn-primary" onclick="ResetToDO()" >Reset</button>
+
+    <div id="mapTODO"></div>
+</div>
+<hr>
+<div class="container">
+  <h1>Student Marks Calculator</h1>
+  <label>Maths</label> <input type="number" id="maths">
+  <label>English</label> <input type="number" id="english">
+  <label>Marathi</label> <input type="number" id="marathi">
+  <label>Science</label> <input type="number" id="science">
+  <label>Hindi</label> <input type="number" id="hindi">
+<button onclick="submitMartks()" class="btn btn-primary mt-2">Show Result</button>
+<div>
+  <p class="lead">Average : <span id="avgMarks"></span></p>
+  <p class="lead">Maximum Marks : <span id="maxMarks"></span></p>
+  <p class="lead">Minimum Marks : <span id="minMarks"></span></p>
+
+</div>
+</div>
+<div class="container">
+  <h1>Search in Array</h1>
+  <input id="inputSearch" />
+  <button class="btn btn-primary" onclick="Search()" >Search</button>
+  <p id="resultSearch" class="lead"></p>
+</div>
+
+<div class="container">
+  <h1>Filter Even and Odd Numbers</h1>
+  <input type="number" id="num1" />
+  <button class="btn btn-primary" onclick="AddNumbers()" >Add number</button>
+  <button class="btn btn-primary" onclick="ShowEvenNumbers()" >Show Even</button>
+  <button class="btn btn-primary" onclick="ShowOddNumbers()">Show Odd</button>
+  <button class="btn btn-primary" onclick="clearArray()">Clear</button>
+<div>
+  <p>Even Numbers : <span class="lead" id="EvanNumbers"></span></p>
+  <p> Odd Numbers : <span class="lead" id="EvanNumbers"></span></p>
+   
+</div>
+
+
+</div>
+
+
+
+    <script src="./script.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+  </body>
+</html>

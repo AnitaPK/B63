@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        .fontColor{
+            color:green
+        }
+        .listFruitClass{
+            list-style-type: square;
+            font-size: larger;
+        }
+        .tableClass{
+            border: 1px solid black;
+
+        }
+        td, th{
+            border: 1px solid black;
+        }
+        .tableClass th{
+            color: blue;
+        }
+        .tableClass td{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul id="fruitList" class="listFruitClass"></ul>
+
+<table class="tableClass">
+    <thead>
+        <tr>
+        <th>Sr No</th>
+        <th>Name</th>
+        </tr>
+    </thead>
+    <tbody id="listDevices"></tbody>
+</table>
+
+    <script>
+        fruitArray = ['Apple','Banana','Mango','Chickoo']
+        console.log(fruitArray)
+        fruitArray.map((fruit)=>console.log(fruit))
+        document.querySelector('#fruitList').innerHTML = fruitArray.map((fruit)=>`
+                                                            <li>I like to eat 
+                                                                <i class='fontColor'>${fruit}</i>
+                                                            </li>
+                                                        `).join('')
+
+    </script>
+    <script>
+        electronicItems = ['Mobile','Television','Microwave','HeadPhone']
+        document.querySelector('#listDevices').innerHTML = electronicItems.map((d,i)=>`
+                                                                    <tr>
+                                                                        <td>${i+1}</td>
+                                                                        <td>${d}</td>
+                                                                    </tr>
+        `).join('')
+
+    </script>
+</body>
+</html> 
