@@ -93,7 +93,8 @@ function renderByBrandName(brnd){
 
 // brand render in dropdown 
 let brands = new Set(watches.map((p)=>p.brand))
-console.log(brands)
+b1 = Array.from(brands)
+console.log(b1)
 
 function renderBrand (){
 document.querySelector('#rendeBrands').innerHTML = watches.map((p)=>`
