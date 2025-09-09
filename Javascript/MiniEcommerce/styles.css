@@ -3,3 +3,10 @@
     font-weight: 900px;
     text-shadow: 2px 2px 3px brown;
 }
+
+.cardImage{
+  background-image: url('./assets/cardWatch.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right bottom; 
+}
