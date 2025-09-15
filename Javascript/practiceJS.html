@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<h1>Form Validation</h1>
+
+<div class="container w-50 mx-auto bg-secondary p-3">
+    <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="userNameInput">
+      
+</div>
+<div id="userMSG"></div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-envelope"></i></span>
+  <input type="email" class="form-control" placeholder="user@gmail.com" aria-describedby="basic-addon2" id="emailAddressInput">
+</div>
+<div id="EmailMSG"></div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon3"><i class="fa-solid fa-envelope"></i></span>
+  <input type="text" class="form-control" placeholder="******" aria-label="Username" aria-describedby="basic-addon3" id="passwordInput">
+</div>
+<div id="passwordMSG"></div>
+
+<button class="btn btn-primary" id="registerBTN">Register</button>
+</div>
+
+<script>
+
+  function register(){
+    userNameInputValue = document.querySelector('#userNameInput').value 
+    emailAddressInputValue = document.querySelector("#emailAddressInput").value 
+    passwordInputValue = document.querySelector('#passwordInput').value
+    if(userNameInputValue.trim().length > 0){
+        document.querySelector('#userMSG').innerHTML = `<div class="alert alert-success" role="alert">
+  user name added successfully
+</div>`
+    }else{
+document.querySelector('#userMSG').innerHTML = `<div class="alert alert-danger" role="alert">
+  user name should not empty
+</div>`
+    }
+
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ 
+    // console.log(emailAddressInputValue.match(/^[a-zA-Z]{1}+[a-zA-Z0-9_.]+@gmail.com/))
+    if(emailPattern.test(emailAddressInputValue)){
+      document.querySelector('#EmailMSG').innerHTML = `<div class="alert alert-success" role="alert">
+  email address added successfully
+</div>`
+    }else{
+document.querySelector('#EmailMSG').innerHTML = `<div class="alert alert-danger" role="alert">
+  email address is not in pattern
+</div>`
+    
+    }
+    if(passwordInputValue.trim().length >=6){
+document.querySelector('#passwordMSG').innerHTML = `<div class="alert alert-success" role="alert">
+  password added successfully
+</div>`
+    }else{
+document.querySelector('#passwordMSG').innerHTML = `<div class="alert alert-danger" role="alert">
+  password should not be less than 6 character
+</div>`
+    }
+  }
+
+  document.querySelector('#registerBTN').addEventListener('click', register)
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+</body>
+</html>

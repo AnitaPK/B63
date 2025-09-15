@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .linkBTN{
+            width: 150px;
+            padding: 10px;
+            background-color: bisque;
+            color: maroon;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="linkBTN"></div>
+
+
+
+    <script>
+        document.querySelector('body').style.backgroundColor = 'black'
+
+        pElmt = document.createElement('p')
+        // pElmt.textContent = 'Hello world'
+        console.log(pElmt, 'pElement')
+
+        pElmtContent = document.createTextNode('Hello World')
+        console.log(pElmtContent, 'p tag content')
+        pElmt.style.color = '#fff'
+        pElmt.appendChild(pElmtContent)
+        console.log(pElmt, 'after appending p element')
+        
+        document.querySelector('body').appendChild(pElmt)
+
+
+        h1Elmt = document.createElement('h1')
+        h1Text = document.createTextNode('This is heading')
+        h1Elmt.style.color = 'red'
+        h1Elmt.style.textAlign = 'center'
+        h1Elmt.appendChild(h1Text)
+        document.querySelector('body').appendChild(h1Elmt)
+
+        wslink = document.createElement('a')
+
+        wsText = document.createTextNode('Wisdom Sprouts')
+        wslink.appendChild(wsText)
+
+        wslink.setAttribute('href', 'https://wisdomsprouts.in/')
+
+        console.log(wslink, 'ws link')
+        document.querySelector('.linkBTN').appendChild(wslink)
+    </script>
+</body>
+</html>
