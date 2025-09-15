@@ -7,7 +7,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="bg-light text-dark">
+
+  <nav>
+    <button id="changeTheme" class="btn btn-secondary">Change Theme</button>
+  </nav>
 <h1>Form Validation</h1>
 
 <div class="container w-50 mx-auto bg-secondary p-3">
@@ -73,7 +77,26 @@ document.querySelector('#passwordMSG').innerHTML = `<div class="alert alert-dang
 
   document.querySelector('#registerBTN').addEventListener('click', register)
   </script>
+    <script >
+      document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('#changeTheme').addEventListener('click',()=>{
+        // document.body.classList.remove('bg-light', 'text-dark')
+        // document.querySelector('body').classList.add('bg-dark','text-primary')
+        // console.log(document.body)
+        console.log(document.body.classList)
+        if(document.body.classList.contains('bg-light')){
+        document.body.classList.remove('bg-light', 'text-dark')
 
+        document.querySelector('body').classList.add('bg-dark','text-primary')
+        }else{
+        document.body.classList.remove('bg-dark', 'text-primary')
+
+        document.querySelector('body').classList.add('bg-light','text-dark')
+
+        }
+      })
+      })
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 
