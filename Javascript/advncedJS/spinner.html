@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container d-flex justify-content-center align-items-center " style="height: 600px;" >
+        <div class="spinner-border text-primary " role="status" id="spinner1">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- <h1>Hello-Bootstrap</h1> -->
+
+
+    <script>
+function showWatch(){
+
+        console.log(Date.now())
+        nowDateTime = new Date()
+        console.log(nowDateTime)
+
+        hour = nowDateTime.getHours()
+        console.log(hour)
+
+        minute = nowDateTime.getMinutes()
+        console.log(minute)
+
+        second = nowDateTime.getSeconds()
+        console.log(second)
+        divForWatch = document.createElement('div')
+        // update this line 
+        watchContent = document.createTextNode(`<h2><span>${hour}</span>:<span>${minute}</span>:<span>${second}</span><h2>`)
+        console.log(watchContent)
+        divForWatch.appendChild(watchContent)
+            document.body.appendChild(divForWatch)
+}
+setInterval(showWatch, 1000)
+
+        function showPage (){
+
+                document.querySelector("#spinner1").style.display = 'none'
+                document.body.innerHTML = `
+                                        <h1>Hello World</h1>
+                                        <h2><span>${hour}</span>:<span>${minute}</span>:<span>${second}</span><h2>
+                `
+            }
+
+        function pageLoad() {
+            console.log(document.querySelector("#spinner1"))
+            setTimeout(showPage, 2000)
+        }
+        pageLoad()
+    </script>
+
+<script>
+    try{
+
+    }catch(error){
+
+    }finally{
+        
+    }
+
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
