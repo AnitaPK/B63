@@ -36,9 +36,13 @@ function showWatch(){
         console.log(second)
         divForWatch = document.createElement('div')
         // update this line 
-        watchContent = document.createTextNode(`<h2><span>${hour}</span>:<span>${minute}</span>:<span>${second}</span><h2>`)
-        console.log(watchContent)
-        divForWatch.appendChild(watchContent)
+        // watchContent = document.createTextNode(`<h2><span>${hour}</span>:<span>${minute}</span>:<span>${second}</span><h2>`)
+        
+        //     console.log(watchContent)
+        // divForWatch.appendChild(watchContent)
+            // Correct way: use innerHTML to render HTML tags
+    divForWatch.innerHTML = `<h2><span>${hour}</span>:<span>${minute}</span>:<span>${second}</span></h2>`;
+    
             document.body.appendChild(divForWatch)
 }
 setInterval(showWatch, 1000)
@@ -65,7 +69,7 @@ setInterval(showWatch, 1000)
     }catch(error){
 
     }finally{
-        
+
     }
 
 </script>

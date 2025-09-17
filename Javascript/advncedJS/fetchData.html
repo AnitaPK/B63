@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        getDataPromise = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                companyData = {name:'Wisdom Sprouts', location:'Pune'}
+                resolve(companyData)
+            }, 2000)
+        })
+
+        function fetchData(){
+            getDataPromise
+            .then((result)=>{
+                console.log(result)
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+        }
+fetchData()
+
+function fetchUserData(){
+    fetch('https://dummyjson.com/users')
+    .then(response =>response.json())
+    .then(data=>console.log(data.users))
+    .catch(error=>console.log(error))
+}
+
+// fetch().then().then().catch()
+
+fetchUserData()
+    </script>
+</body>
+</html>
