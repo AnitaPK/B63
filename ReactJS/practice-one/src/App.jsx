@@ -5,9 +5,11 @@ import TributePage from './components/TributePage'
 import GreetingDiwaliFunctional from './components/GreetingDiwaliFunctional'
 import Fruits from './components/Fruits'
 import UserProfile from './components/UserProfile'
+import Counter from './components/Counter'
+import ChangeHeading from './components/ChangeHeading'
 
 function App() {
-  const fruitList = ["Apple", "Banana", 'Orange']
+  const fruitList = ["Apple", "Banana", 'Orange', "Watermelon"]
   const userData={
     name:"Salman Khan",
     city:"Mumbai",
@@ -17,6 +19,8 @@ function App() {
   }
   return (
     <>
+    <ChangeHeading />
+    <Counter />
     <UserProfile hero={userData}/>
     <Fruits fruitList={fruitList}/>
     <GreetingDiwaliFunctional  nameUser='Shubham ' surname="Nikam" age={20} />
