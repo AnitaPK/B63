@@ -7,6 +7,7 @@ import Fruits from './components/Fruits'
 import UserProfile from './components/UserProfile'
 import Counter from './components/Counter'
 import ChangeHeading from './components/ChangeHeading'
+import Calculator from './components/Calculator'
 
 function App() {
   const fruitList = ["Apple", "Banana", 'Orange', "Watermelon"]
@@ -19,6 +20,7 @@ function App() {
   }
   return (
     <>
+    <Calculator />
     <ChangeHeading />
     <Counter />
     <UserProfile hero={userData}/>
