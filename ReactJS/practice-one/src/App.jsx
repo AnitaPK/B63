@@ -11,6 +11,12 @@ import Calculator from "./components/Calculator";
 import ConditionalRendering from "./components/ConditionalRendering";
 import "./App.css";
 import { useState } from "react";
+import ConditionalRenderingAssignments from "./components/ConditionalRenderingAssignments";
+import Villains from "./components/Villains";
+import {singleUserData} from "./data/singleUser.js"
+import UserCard from "./components/UserCard.jsx";
+import UserList from "./components/UserList.jsx";
+import users from './data/users.js'
 
 function App() {
   const fruitList = ["Apple", "Banana", "Orange", "Watermelon"];
@@ -33,6 +39,10 @@ function App() {
 
   return (
     <>
+    <UserList data={users}/>
+    <UserCard userData={singleUserData}/>
+    <Villains />
+    <ConditionalRenderingAssignments />
       <button className={`btn btn-warning`} onClick={handleTheme}>
         ChangeTheme
       </button>
