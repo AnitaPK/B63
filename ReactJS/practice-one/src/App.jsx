@@ -17,6 +17,7 @@ import {singleUserData} from "./data/singleUser.js"
 import UserCard from "./components/UserCard.jsx";
 import UserList from "./components/UserList.jsx";
 import users from './data/users.js'
+import ProjectDetails from "./components/ProjectDetails.jsx";
 
 function App() {
   const fruitList = ["Apple", "Banana", "Orange", "Watermelon"];
@@ -39,6 +40,7 @@ function App() {
 
   return (
     <>
+    <ProjectDetails />
     <UserList data={users}/>
     <UserCard userData={singleUserData}/>
     <Villains />
