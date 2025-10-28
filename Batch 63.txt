@@ -86,6 +86,24 @@ install nodejs
 
 
 
+Examples of lists for map in react
+
+ul -> li
+
+div -> div
+
+row ->div col -> card
+
+
+
+User Object
+img, name, phonenumber, address, email, companyName
+
+User List 
+
+
+[{img, name, phonenumber, address, email, companyName},{img, name, phonenumber, address, email, companyName}]
+
 
 
 

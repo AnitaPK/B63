@@ -54,11 +54,20 @@ const ProjectDetailsPagination = () => {
 
   // Pagination logic
   const totalPages = Math.ceil(filteredProjects.length / itemsPerPage)
+  //           3 ==      23 / 10
   const startIndex = (currentPage - 1) * itemsPerPage
+  //start index of firstpage   (1-1) * 10   =0
+  //startIndex of second page   (2-1) * 10  =10 
   const currentProjects = filteredProjects.slice(
     startIndex,
     startIndex + itemsPerPage
   )
+
+  // arr1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+  //totalPages = 2
+  // startIndex of first page = 0
+  // currentRollnumber = arr1.slice(startIndex, itemsPerPage + startIndex)
+                      //  [1,2,3 ,4 ,5 ,6 ,7 ,8 ,9, 10]
 
   // Reset page to 1 when filters/search change
   useEffect(() => {
@@ -121,7 +130,7 @@ const ProjectDetailsPagination = () => {
       ) : (
         <>
           {/* --- Table --- */}
-          <div style={{ height: '500px', overflowY: 'scroll' }}>
+          <div>
             <table className="table table-striped table-bordered">
               <thead className="table-light">
                 <tr>

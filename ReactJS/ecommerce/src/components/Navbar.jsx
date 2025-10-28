@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { SlLogout } from "react-icons/sl";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const Navbar = ({setIsLoggedIn, loggedUser, setLoggedUser}) => {
   console.log(loggedUser)
@@ -21,8 +23,17 @@ const Navbar = ({setIsLoggedIn, loggedUser, setLoggedUser}) => {
 
      
 
-      {loggedUser ? (<><span className='fw-bold text-danger me-4'>{loggedUser.name}</span>
-      <button className='btn btn-outline-danger' onClick={handleLogout}>Logout</button></>)    : (<> <Link class="btn btn-outline-success" to="/register">Register</Link>
+      {loggedUser ? (<>
+      <FaRegUserCircle className=' text-warning ' />
+      <span className='fw-bold text-warning mx-2'>
+        {loggedUser.name}
+        </span>
+      <button className='btn btn-outline-danger' onClick={handleLogout}>
+        <SlLogout/>
+        <span  className='ps-2'>Logout</span>
+        </button></>
+      )    : (  
+      <> <Link class="btn btn-outline-success" to="/register">Register</Link>
       <Link class="btn btn-outline-success" to="/login">Login</Link></>)}
       </div>
     </form>
