@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { SlLogout } from "react-icons/sl";
 import { FaRegUserCircle } from "react-icons/fa";
+import ThemeContext from '../hooks/ThemeContext';
 
 const Navbar = ({setIsLoggedIn, loggedUser, setLoggedUser}) => {
-  console.log(loggedUser)
+  // console.log(loggedUser)
 
+  const{theme,toggleTheme} = useContext(ThemeContext)
+// console.log(theme, "in navbar")
   const navigate = useNavigate()
 
   function handleLogout(){
@@ -15,13 +18,12 @@ const Navbar = ({setIsLoggedIn, loggedUser, setLoggedUser}) => {
   }
 
   return (
- <nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand">Navbar</a>
-    <form class="d-flex">
-      <div class=" me-2" >
-
-     
+ <nav className={`navbar ${theme == 'light' ? 'navbar-light bg-light' : 'navbar-dark bg-dark'}`}>
+  <div className="container-fluid">
+    <a className="navbar-brand">Navbar</a>
+    <form className="d-flex">
+      <div className=" me-2" >
+   
 
       {loggedUser ? (<>
       <FaRegUserCircle className=' text-warning ' />
@@ -33,8 +35,11 @@ const Navbar = ({setIsLoggedIn, loggedUser, setLoggedUser}) => {
         <span  className='ps-2'>Logout</span>
         </button></>
       )    : (  
-      <> <Link class="btn btn-outline-success" to="/register">Register</Link>
-      <Link class="btn btn-outline-success" to="/login">Login</Link></>)}
+      <> <Link className="btn btn-outline-success" to="/register">Register</Link>
+      <Link className="btn btn-outline-success" to="/login">Login</Link></>)}
+
+      <button onClick={toggleTheme}>Change Theme</button>
+      {/* <b>{theme}</b> */}
       </div>
     </form>
   </div>

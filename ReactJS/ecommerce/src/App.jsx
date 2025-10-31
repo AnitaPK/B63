@@ -7,14 +7,16 @@ import RegisterPage from './pages/RegisterPage'
 import Login from './pages/LoginPage'
 import Cart from './pages/Cart'
 import { useState } from 'react'
+import ThemeProvider from './hooks/ThemeProvider'
 
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [loggedUser, setLoggedUser] = useState()
-
   return (
     <BrowserRouter>
+    <ThemeProvider>
+
         <Navbar setIsLoggedIn={setIsLoggedIn} loggedUser={loggedUser} setLoggedUser={setLoggedUser} />
         <Routes>
           <Route path='/' element={<Dashboard />} ></Route>
@@ -22,6 +24,8 @@ function App() {
           <Route path='/register' element={<RegisterPage />}></Route>
           <Route path='/cart' element={<Cart />}></Route>
         </Routes>
+    </ThemeProvider>
+
     </BrowserRouter>
   )
 }
