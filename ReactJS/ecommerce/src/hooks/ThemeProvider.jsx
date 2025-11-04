@@ -20,7 +20,7 @@ const ThemeProvider = ({ children }) => {
   // Apply background and text color to body
   useEffect(() => {
     document.body.className =
-      theme === "light" ? "bg-light text-dark" : "bg-dark text-light";
+      theme === "light" ? "bg-light text-dark" : "bg-secondary text-light";
   }, [theme]);
 
   return (
