@@ -3,7 +3,7 @@ import useCustomAPI from "../hooks/useCustomAPI";
 import ThemeContext from "../hooks/ThemeContext";
 import ProductCard from "./ProductCard";
 
-const ProductList = () => {
+const ProductList = ({onApplyClick}) => {
   const { theme } = useContext(ThemeContext);
   const { products, loading, error } = useCustomAPI("https://fakestoreapi.com/products");
 
@@ -66,6 +66,7 @@ const ProductList = () => {
             </option>
           ))}
         </select>
+        <button className="btn btn-primary" onClick={onApplyClick}>Check Highest selling Products</button>
       </div>
 
       {/* --- Product Grid --- */}

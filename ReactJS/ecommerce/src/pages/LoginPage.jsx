@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 
@@ -15,8 +15,14 @@ const LoginPage = ({setIsLoggedIn, setLoggedUser}) => {
   }
 
 
+  const inputRef11 = useRef(null)
+  function handleFocus(){
+     inputRef11.current.focus()
+  }
+
   useEffect(()=>{
       getDataFromLocalStorage()
+      handleFocus()
   },[])
 
 
@@ -60,8 +66,9 @@ const LoginPage = ({setIsLoggedIn, setLoggedUser}) => {
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
                   onChange={(e)=>setEmail(e.target.value)}
+                  ref={inputRef11}
                 />
-        
+              {/* <button onClick={()=>inputRef11.current.focus()}>Click for focus</button> */}
               </div>
               <div className="mb-3">
                 <label for="exampleInputPassword1" class="form-label">
