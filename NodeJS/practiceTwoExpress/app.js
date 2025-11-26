@@ -1,16 +1,22 @@
 const express = require('express')
 require('dotenv').config()
 
-
 const app = express()
 
 const port =   process.env.PORT  || 7000
 
-app.get('/',(req,res)=>{
-    res.send('Hello from express..')
-})
+app.use(express.urlencoded({extends:true}))
+app.use(express.json())
 
-app.get('/contactus', (req,res)=>{
+app.use('/',express.static('public'))
+
+// app.get('/',(req,res)=>{
+//     console.log(req.method,"***************")
+//     res.send('Hello from express..')
+// })
+
+app.post('/contactus', (req,res)=>{
+    console.log(req.body,"****req.body***")
     res.send("<h1>This is Contact us page</h1>")
 })
 
