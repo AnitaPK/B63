@@ -9,6 +9,10 @@ router.get('/totalPopulation', dashboardController.totalPopulation)
 router.get('/topTENPOpContries',dashboardController.topTENPOpContries )
 
 
+router.get('/getUniqueCont',dashboardController.getUniqueCont)
+router.get('/getDataByConti', dashboardController.dataOfContinent)
+
+
 
 
 
