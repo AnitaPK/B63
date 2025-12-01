@@ -20,6 +20,7 @@ import users from './data/users.js'
 import ProjectDetails from "./components/ProjectDetails.jsx";
 import ProjectDetailsWithFilter from "./components/ProjectDetailsWithFilter.jsx";
 import ProjectDetailsPagination from "./components/ProjectDetailsPagination.jsx";
+import CounterComponent from "./components/reducer/CounterComponent.jsx";
 
 function App() {
   const fruitList = ["Apple", "Banana", "Orange", "Watermelon"];
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <>
+    <CounterComponent />
     <ProjectDetailsPagination />
 
     <ProjectDetails />
