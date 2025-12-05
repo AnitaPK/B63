@@ -1,6 +1,7 @@
 const User = require('../models/userModel')
 const bcrypt = require('bcryptjs')
-const { get } = require('../routes/taskRoute')
+const jwt = require('jsonwebtoken')
+require('dotenv').config()
 
 async function register(req,res){
 
@@ -37,7 +38,12 @@ async function login(req,res){
         if(!checkedPass){
             res.status(400).send({msg:"Password incorrect",success:false})
         }
-        res.status(202).send({msg:"user logged in",success:true, user:getUser})
+        const loggedUser ={
+            id:getUser.id,
+            role:getUser.role
+        }
+        const token = jwt.sign(loggedUser, process.env.SECREAT_KEY)
+        res.status(202).send({msg:"user logged in",success:true, token:token})
         
     } catch (error) {
         res.status(500).send({mgs:'server error'})
@@ -45,6 +51,7 @@ async function login(req,res){
 }
 
 async function getUserInfo(req,res){
+    console.log(req.user)
     try {
         
     } catch (error) {
@@ -71,6 +78,7 @@ async function deleteUser(req,res){
 async function getAllUsers(req,res){
     try {
         
+        res.status(200).send({success:true})
     } catch (error) {
         res.status(500).send({mgs:'server error'})
     }
