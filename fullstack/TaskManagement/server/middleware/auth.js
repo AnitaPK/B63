@@ -8,13 +8,14 @@ function auth(req,res,next){
 
     const fullToken = req.headers.authorization
     if(fullToken.startsWith('Bearer')){
+
     const token = fullToken.split(" ")[1]
     console.log(token,"********")
     const decoded = jwt.verify(token, process.env.SECREAT_KEY)
 
     req.user = decoded
     console.log(req.user,"req.user")
-    next()
+    return next()
     }
     return res.status(400).send({msg:"Bearer not found"})
 }

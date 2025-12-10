@@ -51,9 +51,16 @@ async function login(req,res){
 }
 
 async function getUserInfo(req,res){
-    console.log(req.user)
+    console.log(req.user.id)
     try {
-        
+       const loggedUser = await User.findOne({
+        where:{id:req.user.id},
+        attributes:["id","name","email","role","contactNumber","address"]
+       })
+       if(!loggedUser){
+        res.status(400).send({msg:"user not found",success:false})
+       }
+       res.status(200).send({user:loggedUser,success:true})
     } catch (error) {
         res.status(500).send({mgs:'server error'})
     }
@@ -77,8 +84,11 @@ async function deleteUser(req,res){
 
 async function getAllUsers(req,res){
     try {
-        
-        res.status(200).send({success:true})
+        const users = await User.findAll({
+            attributes:["id","name"]
+        })
+
+        res.status(200).send({success:true, users:users})
     } catch (error) {
         res.status(500).send({mgs:'server error'})
     }

@@ -2,16 +2,17 @@ const express = require('express')
 
 const router = express.Router()
 const taskController = require('../controllers/taskController')
+const {admin, auth} = require('../middleware/auth')
 
 
 
-router.post('/createTask', taskController.createTask)
-router.get('/getAllTasks', taskController.getAllTasks)
-router.get('/getTaskByID/:ID', taskController.getTaskByID)
-router.put('/updateTask/:ID', taskController.updateTask)
-router.delete('/deleteTask/:ID', taskController.deleteTask)
+router.post('/createTask',auth, admin, taskController.createTask)
+router.get('/getAllTasks',auth,admin, taskController.getAllTasks)
+router.get('/getTaskByID/:ID',auth, taskController.getTaskByID)
+router.put('/updateTask/:ID',auth, admin, taskController.updateTask)
+router.delete('/deleteTask/:ID',auth,admin, taskController.deleteTask)
 
-router.get('/queryTaskTitle/', taskController.queryTaskTitle)
+router.get('/queryTaskTitle/',auth, taskController.queryTaskTitle)
 
 //find completed tasks
 //find highest priority tasks
@@ -19,5 +20,7 @@ router.get('/queryTaskTitle/', taskController.queryTaskTitle)
 
 // router.get('tasksOfUSer',)
 
+// router.patch('/statusUpdate/:ID', )
+// router.get('/getTasksByAssignedUser',)
 
 module.exports = router

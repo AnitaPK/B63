@@ -1,0 +1,80 @@
+About yourself
+Hobby
+experience
+
+
+B63 
+JFP   HTML,CSS,advancedCSS  css 
+
+html4 vs   html5
+
+Bootstrap 
+
+
+node install
+
+JavaScript 
+
+variables ip/op
+output[console.log(),alert(),document.write(),alltags(.innerHTML,.innerText)]
+inputs [ prompt, ]  var let const
+
+datatypes   ->
+
+
+'123456789'.splite('')   =[1,2,3,4,5,6,7,8,9]
+
+'Bearer ertdf45fgh5678yuvb.tyu678hjk.567fghj56ghj'
+
+
+function fName(){}
+
+const fName =()=>{}
+
+{
+  empName:"Harsh",
+  empAddress:{
+	city:"Indor",
+	pincode:"452001"	
+	},
+  empEmail:"harsh@gmail.com",
+  phoneNumber:"1234561234",
+  sal:2345678,
+  projectList:["ERP-portal","GameApplication","SportsWebsite"]
+}
+
+*  Store list of projects in harshProjects of employee whos name is Harsh
+*  Store cityName and pincode of Harsh
+*  find sal of Harsh
+
+Library Management System  *
+ProjectManagement 
+Hostel Management System
+Ecommerce -Cloth Shope   *
+Appointment Management System (Doctor,Patient) *
+Restorent Management System
+Employee Management System
+Job Portal System
+Guard Manangemnt System
+Fitness Application
+TravelAgency(MERN)
+Ticket Booking App
+RealEstate (Property buy/rent)(with mySQL)
+carRentalApp
+E-Learning
+sportify Clone
+Netflix Clone
+BookMyShow Clone
+Inventatary
+Real time Chat application
+Stock Management System
+
+
+
+
+
+
+
+
+
+
