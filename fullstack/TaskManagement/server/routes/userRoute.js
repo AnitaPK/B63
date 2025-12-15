@@ -18,3 +18,6 @@ router.get('/getAllUsers', auth, admin,userController.getAllUsers)
 
 
 module.exports = router
+
+
+// http://localhost:5000/api/user/register 

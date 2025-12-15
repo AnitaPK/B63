@@ -9,7 +9,7 @@ async function register(req,res){
         let {name,email,password,contactNumber,address} = req.body
         console.log(password,"before bcrypt")
         if(!name || !email || !password){
-           return res.status(400).send({msg:"data not found", success:false})
+           return res.status(201).send({msg:"data not found", success:false})
         }
         const existingUser = await User.findOne({
             where:{email}
@@ -21,7 +21,7 @@ async function register(req,res){
         password = await bcrypt.hash(password,salt10)
         console.log(password,'hashed password')
         const newUser = await User.create({name,email,password,contactNumber,address}) 
-        res.status(200).send({msg:"User created successfully", success:true})
+        res.status(202).send({msg:"User created successfully", success:true})
     } catch (error) {
         res.status(500).send({mgs:'server error'})
     }
@@ -32,11 +32,11 @@ async function login(req,res){
     try {
         const getUser = await User.findOne({where:{email:email}})
         if(!getUser){
-            res.status(400).send({msg:"Invalid email address",success:false})
+            res.status(201).send({msg:"Invalid email address",success:false})
         }
         const checkedPass = await bcrypt.compare(password, getUser.password)
         if(!checkedPass){
-            res.status(400).send({msg:"Password incorrect",success:false})
+            res.status(201).send({msg:"Password incorrect",success:false})
         }
         const loggedUser ={
             id:getUser.id,
