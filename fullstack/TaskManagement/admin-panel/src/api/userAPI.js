@@ -9,3 +9,12 @@ export const registerUser = (data) => {
 export const loginUser = (data) =>{
     return axiosInstance.post("/user/login",data)
 }
+
+
+export const getLoggedUser = () => {
+  return axiosInstance.get("/user/getUserInfo")
+}
+
+export const getAllUserList = ()=>{
+  return axiosInstance.get("/user/getAllUsers")
+}

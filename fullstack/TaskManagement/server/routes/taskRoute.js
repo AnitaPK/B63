@@ -6,8 +6,8 @@ const {admin, auth} = require('../middleware/auth')
 
 
 
-router.post('/createTask',auth, admin, taskController.createTask)
-router.get('/getAllTasks',auth,admin, taskController.getAllTasks)
+router.post('/createTask',auth, taskController.createTask)
+router.get('/getAllTasks',auth, taskController.getAllTasks)
 router.get('/getTaskByID/:ID',auth, taskController.getTaskByID)
 router.put('/updateTask/:ID',auth, admin, taskController.updateTask)
 router.delete('/deleteTask/:ID',auth,admin, taskController.deleteTask)

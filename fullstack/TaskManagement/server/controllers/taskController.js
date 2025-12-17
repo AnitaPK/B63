@@ -3,25 +3,25 @@ const Task = require('../models/taskModel')
 
 
 async function createTask(req,res){
-    console.log(req.body)
-    // const {} = req.body 
+    const { title, description, status, priority, startDate, endDate } = req.body
     try {
-        const newTask = await Task.create(req.body)
-        if(newTask){
-            res.status(200).send({msg:"task created successfully...", success:true})
-        }else{
-            res.status(400).send({msg:"Error while task creating",success:false})
+        const newTask = await Task.create({ title, description, status, priority, startDate, endDate, createdBy: req.user.id })
+        if (newTask) {
+            return res.status(201).send({ msg: "Task Created Succesfully", success: true })
+        } else {
+            return res.send(202).send({ msg: "Error While Task Creating", success: false })
         }
     } catch (error) {
-        res.status(500).send({msg:"Server Error" ,success:false})
+        return res.status(500).send({ msg: "Internal Server Error", success: false })
+
     }
 }
 async function getAllTasks(req,res){
     try {
         const tasks = await Task.findAll({
-            attributes:["id", "title", "status", "startDate","endDate"]
+            // attributes:["id", "title", "status", "startDate","endDate"]
         })
-         res.status(200).send({taks:tasks, success:true})
+         res.status(200).send({tasks:tasks, success:true})
     } catch (error) {
         res.status(500).send({msg:"Server Error",success:false})
     }

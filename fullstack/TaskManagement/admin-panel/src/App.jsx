@@ -5,6 +5,8 @@ import RegisterPage from './pages/RegisterPage'
 import LoginPage from './pages/LoginPage'
 import { ToastContainer } from 'react-toastify'
 import Dashboard from './pages/Dashboard'
+import ProtectedRoute from './components/ProtectedRoute'
+import UserList from './components/UserList'
 
 function App() {
 
@@ -13,10 +15,11 @@ function App() {
       <Routes>
         <Route path='/' element={<LoginPage />}></Route>
         <Route path='/register' element={<RegisterPage />}></Route>
-        {/* <ProtectedRoute>
-          <Route  path='/dahsboard' element={<DashboardNavbar />} ></Route>
-        </ProtectedRoute> */}
-          <Route  path='/dashboard' element={<Dashboard />} ></Route>
+            {/* Protected Routes */}
+        <Route element={<ProtectedRoute />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path='/dashboard/users' element={<UserList />}></Route>
+        </Route>
 
       </Routes>
       <ToastContainer />
