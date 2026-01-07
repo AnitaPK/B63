@@ -30,7 +30,7 @@ const AddTask = () => {
       setFormData({
         title: "",
         description: "",
-        status: "pending",
+        status: "Pending",
         priority: "medium",
         startDate: "",
         endDate: "",
@@ -84,9 +84,9 @@ const AddTask = () => {
               value={formData.status}
               onChange={handleChange}
             >
-              <option value="pending">Pending</option>
-              <option value="in-progress">In Progress</option>
-              <option value="completed">Completed</option>
+              <option value="Pending">Pending</option>
+              <option value="InProgress">In Progress</option>
+              <option value="Completed">Completed</option>
             </select>
           </div>
 

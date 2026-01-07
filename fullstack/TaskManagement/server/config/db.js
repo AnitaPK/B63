@@ -6,16 +6,9 @@ const sequelize = new Sequelize(process.env.DB_DATABASE, process.env.DB_USER, pr
     host: process.env.DB_HOST,
     port: process.env.DB_PORT || 3306,
     dialect:'mysql',
-    // pool: {
-    //     max: 5,
-    //     min: 0,
-    //     acquire: 30000,
-    //     idle: 10000
-    // },
     define:{
         timestamps:true
     }
-
 })
 
 async function testConnection(){
@@ -31,7 +24,6 @@ async function syncDB({force=false, alter=false}={}){
     try {
         await sequelize.sync({force,alter})
         console.log('✅ All models were synchronized successfully.');
-        
     } catch (error) {
          console.error('❌ Error syncing models:', error);
     }

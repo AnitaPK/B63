@@ -5,6 +5,7 @@ import { getLoggedUser } from '../api/userAPI';
 import UserList from '../components/UserList';
 import AddTask from '../components/AddTask';
 import TaskList from '../components/TaskList';
+import YourTasks from '../components/YourTasks';
 
 const DashboardNavbar = () => {
   const [user,setUser] = useState()
@@ -36,6 +37,8 @@ async function fetchUser(){
         return <UserList />;
       case "tasks":
         return <TaskList />;
+      case "YourTasks":
+        return <YourTasks />;
       default:
         return <h4>Welcome to Dashboard</h4>;
     }
@@ -52,6 +55,16 @@ async function fetchUser(){
           <h5 className="text-center mb-4">👤 {user? user.name : 'user'}</h5>
 
           <ul className="nav flex-column">
+            
+            <li className="nav-item mb-2">
+              <button
+                className="btn btn-dark w-100 text-start"
+                onClick={() => setActivePage("YourTasks")}
+              >
+                <FaTasks className="me-2" />
+                Your Task List
+              </button>
+            </li>
             <li className="nav-item mb-2">
               <button
                 className="btn btn-dark w-100 text-start"
@@ -81,6 +94,8 @@ async function fetchUser(){
                 Task List
               </button>
             </li>
+
+
 
             <hr />
 

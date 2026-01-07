@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { showAllTasks } from "../api/taskAPI";
 import { toast } from "react-toastify";
+import AssignTaskModal from './AssignTaskModal'
+import { getAllUserList } from "../api/userAPI";
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
+ const [showModal, setShowModal] = useState(false);
+  const [selectedTaskId, setSelectedTaskId] = useState(null);
+const [users, setUsers] = useState([]);
 
   const fetchData = async () => {
     try {
@@ -18,16 +23,32 @@ const TaskList = () => {
       setLoading(false);
     }
   };
+    const fetchUsers = async () => {
+    try {
+      const res = await getAllUserList();
+      setUsers(res.data.users || []);
+    } catch {
+      toast.error("Failed to fetch users");
+    }
+  };
 
   useEffect(() => {
     fetchData();
+    fetchUsers()
   }, []);
+
+  const openAssignModal = (taskId) => {
+    setSelectedTaskId(taskId);
+    setShowModal(true);
+  };
+
 
   if (loading) {
     return <p>Loading tasks...</p>;
   }
 
   return (
+    <>
     <div className="card shadow">
       <div className="card-header">
         <h5>Task List</h5>
@@ -46,6 +67,7 @@ const TaskList = () => {
                 <th>Priority</th>
                 <th>Start Date</th>
                 <th>End Date</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -56,9 +78,9 @@ const TaskList = () => {
                   <td>
                     <span
                       className={`badge 
-                        ${task.status === "completed"
+                        ${task.status === "Completed"
                           ? "bg-success"
-                          : task.status === "in-progress"
+                          : task.status === "InProgress"
                           ? "bg-warning"
                           : "bg-secondary"
                         }`}
@@ -67,8 +89,11 @@ const TaskList = () => {
                     </span>
                   </td>
                   <td>{task.priority}</td>
-                  <td>{task.startDate || "-"}</td>
-                  <td>{task.endDate || "-"}</td>
+                  <td>{new Date(task.startDate).toLocaleDateString() || "-"}</td>
+                  <td>{new Date(task.endDate).toLocaleDateString() || "-"}</td>
+                  <td><button 
+                    onClick={() => openAssignModal(task.id)}
+                  >Assign to user</button></td>
                 </tr>
               ))}
             </tbody>
@@ -76,6 +101,14 @@ const TaskList = () => {
         )}
       </div>
     </div>
+    <AssignTaskModal
+        show={showModal}
+        onClose={() => setShowModal(false)}
+        taskId={selectedTaskId}
+        users={users}
+        openAssignModal={openAssignModal}
+      />
+      </>
   );
 };
 

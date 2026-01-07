@@ -48,7 +48,37 @@ async function getTasksByUser(req, res) {
     }
 }
 
+async function getTasksOfUser(req,res){
+const userId  = req.user.id
+    console.log(userId)
+    try {
+        const assignedTask = await AssignTask.findAll({
+            where: { userId: userId },
+            include: [
+                {
+                    model: Task,
+                    as: "task",
+                    attributes: ["id", "title", "status", "priority", "startDate", "endDate"]
+                },
+                {
+                    model: User,
+                    as: 'assignedBy',
+                    attributes: ['name', 'role']
+                }
+
+            ]
+        })
+        console.log(assignedTask)
+
+        return res.status(200).send({ assignedTasks: assignedTask })
+
+    } catch (error) {
+        return res.status(500).send({ msg: "Internal Server Error", success: false })
+
+    }
+}
+
 
 module.exports = {
-    assignTask,getTasksByUser
+    assignTask,getTasksByUser, getTasksOfUser
 }
