@@ -2,7 +2,9 @@ import axiosInstance from "./axiosInstance";
 
 // 🔹 Register User
 export const registerUser = (data) => {
-  return axiosInstance.post("/user/register", data);
+  return axiosInstance.post("/user/register", data, {headers: {
+    "Content-Type": "multipart/form-data",
+  }},);
 };
 
 // Login user 
@@ -19,3 +21,5 @@ export const getLoggedUser = () => {
 export const getDoctorList = () =>{
     return axiosInstance.get("/user/doctorList")
 }
+
+

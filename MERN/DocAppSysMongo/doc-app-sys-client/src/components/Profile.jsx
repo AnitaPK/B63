@@ -24,7 +24,7 @@ const Profile = () => {
             </div>
           </div>
           <div className="col">
-            <img src={`${user?.imagePath}`} alt={user?.name} />
+            <img src={`${user?.imagePath}`} alt={user?.name} className='userImage'/>
           </div>
         </div>
       </div>

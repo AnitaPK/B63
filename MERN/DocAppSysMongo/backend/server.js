@@ -4,6 +4,7 @@ const cors = require('cors')
 const path = require('path')
 const connectDB = require('./config/db')
 const userRoute = require('./routes/userRoute')
+const docRoute = require('./routes/doctorRoute')
 
 
 const app = express()
@@ -16,6 +17,7 @@ app.use(cors())
 app.get('/', (req, res) => res.send('Hello World!'))
 
 app.use('/api/user', userRoute)
+app.use('/api/doc', docRoute)
 
 // http://localhost:7005/api/user/register
 

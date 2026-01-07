@@ -6,9 +6,9 @@ require("dotenv").config();
 BASEURL = "http://localhost:7005/uploads/";
 
 const register = async (req, res) => {
-  console.log(req.body);
+  console.log(req.file,"req.file",req.body);
   let { name, email, password, contactNumber, address } = req.body;
-  imagePath = req.file ? req.file.filename : null;
+  let imagePath = req.file ? req.file.filename : null;
   try {
     const existingUser = await User.findOne({ email: email });
 

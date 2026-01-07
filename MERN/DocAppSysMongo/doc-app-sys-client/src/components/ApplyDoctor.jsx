@@ -4,6 +4,7 @@ const ApplyDoctor = () => {
   return (
     <div>
       ApplyDoctor
+      
     </div>
   )
 }

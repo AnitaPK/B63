@@ -10,26 +10,38 @@ const RegisterPage = () => {
     password: "",
     contactNumber: "",
     address: "",
+    userImage: null,
   });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
+    const { name, value, files } = e.target;
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      // [e.target.name]: e.target.value,
+      [name]: files ? files[0] : value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const data = new FormData();
+    data.append("name", formData.name);
+    data.append("email", formData.email);
+    data.append("password", formData.password);
+    data.append("contactNumber", formData.contactNumber);
+    data.append("address", formData.address);
+    data.append("userImage", formData.userImage);
     console.log("Register Data:", formData);
-    const res = await registerUser(formData)
-    if(res.data.success){
-        toast.success(res.data.msg)
-        navigate('/')
-    }else{
-        toast.error(res.data.msg)
+
+    const res = await registerUser(formData);
+    if (res.data.success) {
+      toast.success(res.data.msg);
+      navigate("/");
+    } else {
+      toast.error(res.data.msg);
     }
   };
 
@@ -44,7 +56,6 @@ const RegisterPage = () => {
 
             <div className="card-body">
               <form onSubmit={handleSubmit}>
-                
                 {/* Name */}
                 <div className="mb-3">
                   <label className="form-label">Name *</label>
@@ -105,12 +116,22 @@ const RegisterPage = () => {
                     onChange={handleChange}
                   ></textarea>
                 </div>
+                <div className="mb-3">
+                  <label className="form-label">Profile Image</label>
+                  <input
+                    type="file"
+                    className="form-control"
+                    name="userImage"
+                    accept="image/*"
+                    onChange={handleChange}
+                  />
+                </div>
 
                 {/* Submit */}
                 <button type="submit" className="btn btn-primary w-100">
                   Register
                 </button>
-<Link to='/' >In already registered</Link>
+                <Link to="/">In already registered</Link>
               </form>
             </div>
           </div>
