@@ -69,10 +69,24 @@ res
   }
 };
 
+
+
+async function docApplyList  (req,res){
+try {
+    const doctorAplyList = await Doctor.find({status:"Pending"})
+    res.status(200).send({doc:doctorAplyList, success:true})
+  } catch (error) {
+    res.status(500).send({ msg: "Server Error" });
+  }
+}
+
+
+
 module.exports = {
   applyDoctor,
-  docStatus
+  docStatus,
 //   getDoctorInfo,
 //   updateDoctor,
 //   deleteDoctor,
+docApplyList
 };

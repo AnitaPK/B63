@@ -6,10 +6,12 @@ const router = express.Router()
 
 
 router.post('/apply', auth, doctorController.applyDoctor)
-router.post('/docStatus/:DoctorID', auth, admin, doctorController.docStatus)   //update on two tables
+router.patch('/docStatus/:DoctorID', auth, admin, doctorController.docStatus)   //update on two tables
 // router.get('/getDocInfo', doctorController.getDoctorInfo)
 // router.patch('/update/:ID',doctorController.updateDoctor)
 // router.delete('/delete/:ID', doctorController.deleteDoctor)
+router.get('/docApplyList', auth, admin, doctorController.docApplyList)
+
 
 
 

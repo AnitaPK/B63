@@ -77,6 +77,8 @@ const getUserInfo = async (req, res) => {
 
 const doctorList = async (req, res) => {
   try {
+    const docList = await User.find({role:"Doctor"})
+    res.status(200).send({doc:docList, success:true})
   } catch (error) {
     res.status(500).send({ msg: "Server Error" });
   }
